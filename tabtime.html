@@ -1,0 +1,134 @@
+<html>
+
+<img src="tablesoftime.gif" style= "display: block; margin-left: auto; margin-right: auto; width: 50%;">
+    
+<title>Tables of Time</title>
+    <head>
+        <body>
+            <style>
+                body {
+                   text-align: center;
+                   font-family: Comic Sans MS; 
+                   background-color: aqua
+                }
+            </style>
+        </body>
+    </head>
+	
+	
+<h3>1989 - Time Berners-Lee invents the WWW & HTML</h3>
+
+<a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Tim_Berners-Lee.jpg" onmouseover="this.src='https://upload.wikimedia.org/wikipedia/commons/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg';" onmouseout="this.src='https://upload.wikimedia.org/wikipedia/commons/f/f8/Tim_Berners-Lee.jpg';"  alt="Tim Berners-Lee" width="150px">
+
+</a>
+
+    <br>
+    <br>
+
+<table class="center" border="5" style="margin-left: auto; margin-right: auto; body {text-align:center;}">
+
+    
+  <th>Inventer</th><th>Technology</th><th>Fun Fact</th>
+  <tr>
+     <td>Tim Berners-Lee</td><td>WWW & HTML</td><td>He received a knighthood from Queen Elizabeth II in 2004.</td>
+  </tr>
+  <tr>
+     <td>Håkon Wium Lie</td><td>CSS</td><td>He runs his own organic farm.</td>
+  </tr>
+  <tr>
+     <td>Brenden Eich</td><td>Javascript</td><td>He cofounded the Mozilla Project (Firefox)</td>
+  </tr>
+</table>
+
+<h3>1996 - Håkon Wium Lie invents CSS</h3>
+
+    <a href="https://en.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie">
+        <img src="http://i.iinfo.cz/urs/hakon_wium_lie-121043715851298.jpg" onmouseover="this.src='https://pbs.twimg.com/profile_images/681825796802113536/nzEoQF1Y_400x400.jpg';" onmouseout="this.src='http://i.iinfo.cz/urs/hakon_wium_lie-121043715851298.jpg';" alt="Hakon Wium Lie" width="150px">
+        
+    </a>
+<style>
+
+#inventors {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+}
+
+#inventors td, #inventors th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#inventors tr:nth-child(even){background-color: #f2f2f2;}
+
+#inventors tr:hover {background-color: #ddd;}
+
+#inventors th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+</style>
+    
+    <br>
+    <br>
+
+<table id="inventors" border="1">
+  <th>Inventor</th><th>Technology</th>
+  <tr>
+     <td>Tim Berners-Lee</td><td>WWW & HTML</td>
+  </tr>
+  <tr>
+     <td>Håkon Wium Lie</td><td>CSS</td>
+  </tr>
+  <tr>
+     <td>Brenden Eich</td><td>Javascript</td>
+  </tr>
+</table>
+
+<h3>1995 - Brenden Eich invents JavaScript</h3>
+
+<div id="printmytable"></div>
+    
+    <a href="https://en.wikipedia.org/wiki/Brendan_Eich">
+        <img src="http://www.nndb.com/people/095/000031002/brendan-eich-2-sized.jpg" onmouseover="this.src='https://upload.wikimedia.org/wikipedia/commons/d/d1/Brendan_Eich_Mozilla_Foundation_official_photo.jpg';" onmouseout="this.src='http://www.nndb.com/people/095/000031002/brendan-eich-2-sized.jpg';" alt="Brendan Eich" width="150px">
+        
+    </a>    
+
+
+<script>
+
+function buildmyTable() {
+
+  var inventors = [{name:"Tim Berners-Lee",invention:"WWW & HTML"},{name:"Haken Wium Lie",invention:"CSS"},{name:"Brendan Eich",invention:"Javascript"}];
+
+  // build a string variable with all the table code and data
+  var mytable = "<table border='1'>
+  mytable = mytable + "<th>Inventor</th><th>Invention</th>";
+
+  // loop through data table to add data
+  for (i = 0; i < inventors.length; i = i + 1) {
+    mytable = mytable + "<tr>";
+    mytable = mytable + "<td>" + inventors[i].name + "</td><td>" + inventors[i].invention + "</td>";
+    mytable = mytable + "</tr>";
+  }
+
+  mytable = mytable + "</table>";
+
+  // get the div and substitute mytable data for it
+  var placetoprint = document.getElementById("printmytable");
+  placetoprint.innerHTML = mytable;
+
+}
+
+buildmyTable()
+
+</script>
+
+
+</html>
